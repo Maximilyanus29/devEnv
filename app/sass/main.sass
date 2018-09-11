@@ -1,0 +1,298 @@
+*
+	padding: 0;
+	margin: 0;
+
+body
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+
+li
+	list-style: none;
+	display: flex;
+	
+
+a
+	text-decoration: none;
+
+header
+	background: #f6f6f6;
+	padding: 22px 0;
+
+
+.header-container
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	
+	a
+		color: #000;
+		font-size: 16px;
+		margin-right: 63px;
+		padding: 27px 6px;
+		
+
+		&:hover
+			background: #ffea00;
+
+#menu-checkbox
+	display: none;
+
+ul
+	display: flex;
+
+nav
+	margin-top: 20px;
+
+.top-slide
+	background: url(../img/slider_bg.jpg) no-repeat;
+	background-size: cover;
+	padding-top: 120px;
+	padding-bottom: 300px;
+	
+	& :nth-child(2)
+		padding-bottom: 10px;
+
+	h2
+		background: #ffea00;
+		display: inline;
+		font-size: 70px;
+		padding: 0 13px;
+
+	p
+		background: #414146;
+		display: inline;
+		font-size: 24px;
+		padding: 0 4px;
+		color: #ffffff;
+
+
+
+
+.top-container
+	width: 85%;
+	margin: 0 auto;
+
+.specialize-container
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+
+	h3
+		font-size: 35px;
+
+	p
+		margin-top: 20px;
+		margin-bottom: 40px;
+		font-size: 24px;
+
+.cpecialize-cards
+	display: flex;
+	justify-content: space-between;
+
+.card
+	.top-card
+		position: relative;
+		width: 250px;
+		height: 208px;
+		background: #ffea00;
+		.alt1
+			margin-top: 40px;
+		.description
+			position: absolute;
+			bottom: 20px;
+			margin: 0 auto;
+			width: 100%;
+			font-weight: bold;
+			
+	.bottom-card
+		background: #414146;
+		position: relative;
+		top: -30px;
+		.first-p
+			font-size: 20px;
+			color: white;
+
+.portfolio
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	h4
+		background: #424147;
+		padding: 0 4px;
+		font-size: 18px;
+		display: inline-block;
+		color: #e6d309;
+		margin-bottom: 30px;
+
+	p
+		color: #424146;
+		font-size: 16px;
+
+.toggles
+	button
+		background: none;
+		border: none;
+		color: #424146;
+		cursor: pointer;
+		font-size: 16px;
+		margin: 20px 0;
+		&:after
+			content: ' / '
+		&:last-child:after
+			content: ''
+
+.posts
+	width: 90%;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin: 0 auto;
+
+.brand-slider
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	h4
+		margin-top: 40px;
+		background: #424147;
+		padding: 0 4px;
+		font-size: 18px;
+		display: inline-block;
+		color: #e6d309;
+		margin-bottom: 30px;
+
+	p
+		color: #424146;
+		font-size: 18px;
+
+.owl-carousel
+	display: flex;
+	justify-content: space-around;
+
+footer
+	background: #414146;
+	padding: 30px 0;
+	color: white;
+	
+	h4
+		font-size: 18px;
+
+.footer-container
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 40% 30% 20%;
+	grid-column-gap: 3%;
+	margin-bottom: 100px;
+	.about_us a
+		background: black;
+		color: white;
+		padding: 15px;
+		font-size: 15px;
+		margin-top: 30px;
+		margin-bottom: 40px;
+		border-bottom: 2px solid #414147;
+		display: inline-block;
+
+	.tweets p
+		margin-top: 30px;
+	
+	.contacts 
+		display: inline-block;
+		img
+			padding: 20px 13px 0 0;
+			float: left;
+		p
+			margin-top: 30px;
+
+.footer-bottom
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 60px;
+	background: black;
+	ul
+		display: flex;
+		justify-content: center;
+
+	li
+		margin: 20px 70px 0 40px;
+		font-size: 20px;
+		a
+			color: white;
+
+
+
+
+
+@media screen and( max-width: 420px)
+
+	.header-container
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+
+	.main-menu
+		display: none;
+	
+		li
+			width: 100%;
+			display: block;
+			font-size: 12px;
+
+		a
+			display: block;
+			padding: 8px;
+
+	.toggle-button
+		text-align: center;
+		display: block;
+		cursor: pointer;
+		color: #000;
+
+		&:after
+			content: attr(data-open);
+			display: block;
+
+	#menu-checkbox
+		&:checked+ nav[role="navigation"] .main-menu
+			display: block;
+
+		&:checked+ nav[role="navigation"] .toggle-button:after
+			content: attr(data-close);
+
+	.header-container a
+		margin-right: -65px;
+
+	.main-menu
+		position: relative;
+		top: 30px;
+		right: 115px;
+
+	.top-slide
+		padding-top: 40px;
+		padding-bottom: 40px;
+		
+		h2
+			font-size: 36px;
+		p
+			font-size: 16px;
+
+	.specialize-container
+		font-size: 16px;
+		font-weight: 700;
+
+	.specialize-cards
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		
+	.bottom-card
+		width: 250px;
+		margin: 0 auto;
+
+	.posts
+		width: 90%;
+		display: grid;
+		grid-template-columns: auto;
+		margin: 0 auto;
